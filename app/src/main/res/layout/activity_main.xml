@@ -18,7 +18,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/resultText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -30,15 +30,61 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnParent"
+                android:layout_width="97dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+
+                android:background="#ffffff"
+                android:text="()"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnPercent"
+                android:layout_width="97dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="%"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="97dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="C"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/plusBtn"
+                android:layout_width="97dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:src="@drawable/add"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="120dp"
+            android:layout_height="80dp"
             android:background="#ffffff"
             android:orientation="horizontal"
             android:weightSum="4">
 
             <Button
                 android:id="@+id/btn7"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -48,7 +94,7 @@
 
             <Button
                 android:id="@+id/btn8"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffff"
@@ -58,7 +104,7 @@
 
             <Button
                 android:id="@+id/btn9"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -67,8 +113,8 @@
                 android:textSize="30sp" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="96dp"
+                android:id="@+id/divideBtn"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -77,12 +123,12 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="120dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn4"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
 
@@ -93,7 +139,7 @@
 
             <Button
                 android:id="@+id/btn5"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -103,7 +149,7 @@
 
             <Button
                 android:id="@+id/btn6"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -112,8 +158,8 @@
                 android:textSize="30sp" />
 
             <ImageButton
-                android:id="@+id/imageTimes"
-                android:layout_width="96dp"
+                android:id="@+id/timeBtn"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -123,12 +169,12 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="120dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn1"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
 
@@ -139,7 +185,7 @@
 
             <Button
                 android:id="@+id/btn2"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -149,7 +195,7 @@
 
             <Button
                 android:id="@+id/btn3"
-                android:layout_width="96dp"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -158,8 +204,8 @@
                 android:textSize="30sp" />
 
             <ImageButton
-                android:id="@+id/imageMinus"
-                android:layout_width="96dp"
+                android:id="@+id/minusBtn"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -169,33 +215,33 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="87dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn0"
-                android:layout_width="96dp"
+                android:id="@+id/btnDecimal"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
 
-                android:background="#ffffff"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/btnDec"
-                android:layout_width="96dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
                 android:background="#ffffff"
                 android:text="."
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
             <Button
-                android:id="@+id/btnClear"
-                android:layout_width="96dp"
+                android:id="@+id/btn0"
+                android:layout_width="97dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bttDec"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
@@ -204,8 +250,8 @@
                 android:textSize="30sp" />
 
             <ImageButton
-                android:id="@+id/imageEqual"
-                android:layout_width="96dp"
+                android:id="@+id/btnPlus"
+                android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="#ffffff"
