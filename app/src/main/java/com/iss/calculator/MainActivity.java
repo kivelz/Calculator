@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     TextView resultText;
 
     public enum Operation {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUAL
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUAL, PERCENTAGE
     }
 
     @Override
@@ -35,8 +35,9 @@ public class MainActivity extends Activity {
         Button btn7 = findViewById(R.id.btn7);
         Button btn8 =  findViewById(R.id.btn8);
         Button btn9 =  findViewById(R.id.btn9);
-        Button btn0 =  findViewById(R.id.btnDecimal);
+        Button btn0 =  findViewById(R.id.btn0);
         Button btnClear = findViewById(R.id.btnClear);
+        Button btnPer = findViewById(R.id.btnPercent);
 
         resultText = findViewById(R.id.resultText);
         resultText.setText("0");
@@ -108,6 +109,13 @@ public class MainActivity extends Activity {
                 numberPressed(9);
             }
         });
+        btnPer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            processOperation(Operation.PERCENTAGE);
+            }
+        });
+
 
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,6 +159,8 @@ public class MainActivity extends Activity {
            }
        });
 
+
+
     }
 
     void processOperation(Operation operation) {
@@ -179,7 +189,6 @@ public class MainActivity extends Activity {
                 leftValueStr = String.valueOf(result);
                 resultText.setText(leftValueStr);
             }
-
 
         } else {
             leftValueStr = runningNumber;
