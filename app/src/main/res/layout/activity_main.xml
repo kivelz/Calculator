@@ -250,7 +250,7 @@
                 android:textSize="30sp" />
 
             <ImageButton
-                android:id="@+id/btnPlus"
+                android:id="@+id/btnEqual"
                 android:layout_width="97dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"

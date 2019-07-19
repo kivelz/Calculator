@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     TextView resultText;
 
     public enum Operation {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUAL
     }
 
     @Override
@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
         Button btn8 =  findViewById(R.id.btn8);
         Button btn9 =  findViewById(R.id.btn9);
         Button btn0 =  findViewById(R.id.btnDecimal);
+        Button btnClear = findViewById(R.id.btnClear);
 
         resultText = findViewById(R.id.resultText);
         resultText.setText("0");
@@ -44,6 +45,8 @@ public class MainActivity extends Activity {
         ImageButton btnDivide = findViewById(R.id.divideBtn);
         ImageButton btnMinus =  findViewById(R.id.minusBtn);
         ImageButton btnPlus =  findViewById(R.id.plusBtn);
+        ImageButton btnEqual = findViewById(R.id.btnEqual);
+
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,11 +102,21 @@ public class MainActivity extends Activity {
                 numberPressed(8);
             }
         });
-
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 numberPressed(9);
+            }
+        });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                runningNumber = "";
+                leftValueStr = "";
+                rightValueStr ="";
+                resultText.setText("0");
+                currentOperation = null;
             }
         });
         btnPlus.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +143,14 @@ public class MainActivity extends Activity {
                 processOperation(Operation.DIVIDE);
             }
         });
+
+       btnEqual.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               processOperation(Operation.EQUAL);
+           }
+       });
+
     }
 
     void processOperation(Operation operation) {
